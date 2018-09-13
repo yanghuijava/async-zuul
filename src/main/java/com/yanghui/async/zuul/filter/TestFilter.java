@@ -19,7 +19,8 @@ public class TestFilter extends ZuulFilter {
 	public Object run() {
 		RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        System.out.println("========================================" + Thread.currentThread().getName() + "访问url：" + request.getRequestURI());
+        System.out.println("========================线程名称：" + Thread.currentThread().getName() 
+        		+ "，访问url：" + request.getRequestURI() + "======================");
 		return null;
 	}
 

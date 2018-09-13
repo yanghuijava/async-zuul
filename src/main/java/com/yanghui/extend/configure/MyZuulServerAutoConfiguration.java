@@ -92,6 +92,10 @@ public class MyZuulServerAutoConfiguration {
 				this.zuulProperties);
 	}
 	
+	/**
+	 * 自定义线程池
+	 * @return
+	 */
 	@Bean
 	public AsyncTaskExecutor zuulAsyncPool() {
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
